@@ -1,0 +1,16 @@
+const initialState = {
+    search: ''
+}
+
+export const searchReducers = (state= initialState, action) => {
+    console.log(state)
+    switch(action.type) {
+        case 'SEARCH':
+            return {
+                ...state,
+                search: action.payload
+            }
+        default :
+            return state
+    }
+}
